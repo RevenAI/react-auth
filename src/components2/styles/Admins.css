@@ -1,0 +1,60 @@
+/* General Container Styling */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar */
+  .admin-nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Navigation Links */
+  .admin-link {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover Effect */
+  .admin-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .admin-nav {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .admin-link {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .admin-link {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
+  

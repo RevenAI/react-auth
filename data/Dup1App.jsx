@@ -1,14 +1,14 @@
-import Register from './components/Register';
-import Login from './components/Login';
-import Home from './components/Home';
+import Register from '../src/components/Register';
+import Login from '../src/components/Login';
+import Home from '../src/components/Home';
 import Layout from './components/Layout';
-import Editor from './components/Editor';
-import Admin from './components/Admin';
-import Missing from './components/Missing';
-import Unauthorized from './components/Unauthorized';
-import Lounge from './components/Lounge';
-import LinkPage from './components/LinkPage';
-import RequireAuth from './components/RequireAuth';
+import Editor from '../src/components/Editor';
+import Admin from '../src/components/Admin';
+import Missing from '../src/components/Missing';
+import Unauthorized from '../src/components/Unauthorized';
+import Lounge from '../src/components/Lounge';
+import LinkPage from '../src/components/LinkPage';
+import RequireAuth from '../src/components/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 import AdminList from './components/AdminList';
 

@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "./styles/NotFound.css";
 
 const NotFound = () => {
-    return (
-        <article style={{ padding: "100px" }}>
-            <h1>Oops!</h1>
-            <p>Page Not Found</p>
-            <div className="flexGrow">
-                <Link to="/">Visit Our Homepage</Link>
-            </div>
-        </article>
-    )
-}
+  return (
+    <article className="notfound-container">
+      <h1 className="notfound-title">Oops!</h1>
+      <p className="notfound-text">Page Not Found</p>
+      
+      <Link to="/" className="notfound-button">
+        Visit Our Homepage
+      </Link>
+    </article>
+  );
+};
 
-export default NotFound
+export default NotFound;

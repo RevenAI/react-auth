@@ -1,0 +1,140 @@
+/* General Container */
+.admin-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+
+/* Title */
+.admin-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Loading & Error */
+.loading, .error, .no-admin {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.loading { color: green; }
+.error { color: red; background: #ffe6e6; }
+.no-admin { color: red; background: #ffdddd; }
+
+/* Admin List */
+.admin-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Admin Card */
+.admin-card {
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.admin-card:hover {
+    transform: scale(1.02);
+}
+
+/* Admin Info */
+.admin-info h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.admin-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Admin Posts Link */
+.admin-posts-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-posts-link:hover {
+    text-decoration: underline;
+}
+
+/* Action Buttons */
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-actions button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button Colors */
+.update-btn { background: #28a745; color: white; }
+.update-btn:hover { background: #218838; }
+
+.block-btn { background: #ffc107; color: black; }
+.block-btn:hover { background: #e0a800; }
+
+.delete-btn { background: #dc3545; color: white; }
+.delete-btn:hover { background: #c82333; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .admin-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-title {
+        font-size: 1.5rem;
+    }
+
+    .admin-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .admin-info p {
+        font-size: 0.9rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+    }
+
+    .admin-actions button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

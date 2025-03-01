@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import dynamicAxios from '../api/axios';
+import './styles/Login.css';
 
 const Login = () => {
     const { setAuth } = useAuth();
@@ -69,12 +70,17 @@ const Login = () => {
     };
 
     return (
-        <section>
-            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
+        <section className="signin-container">
+            {/* Error Message */}
+            <p ref={errRef} className={`error-msg ${errMsg ? "show" : "hide"}`} aria-live="assertive">
                 {errMsg}
             </p>
-            <h1>Sign In</h1>
-            <form onSubmit={handleSubmit}>
+
+            {/* Sign In Heading */}
+            <h1 className="signin-title">Sign In</h1>
+
+            {/* Form Section */}
+            <form onSubmit={handleSubmit} className="signin-form">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -82,7 +88,7 @@ const Login = () => {
                     ref={userRef}
                     autoComplete="email"
                     onChange={(e) => setEmail(e.target.value)}
-                    value={email} 
+                    value={email}
                     required
                 />
 
@@ -91,12 +97,16 @@ const Login = () => {
                     type="password"
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
-                    value={password}                     required
+                    value={password}
+                    required
                 />
+
                 <button type="submit">Sign In</button>
             </form>
-            <p>
-                Need an Account?<br />
+
+            {/* Register Link */}
+            <p className="register-link">
+                Need an Account? <br />
                 <span className="line">
                     <Link to="/register">Sign Up</Link>
                 </span>

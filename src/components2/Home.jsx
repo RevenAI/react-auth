@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
-import useRefreshToken from "../hooks/useRefreshToken"
+import "./styles/Home.css"; 
 
 const Home = () => {
-    const refresh = useRefreshToken();
-
   return (
-    <div>
-         <h1>Admin Records</h1>
+    <div className="home-container">
+      <h1 className="home-title">BlogerX App</h1>
 
-        <Link to="/admins">
-            Go to Admins
-        </Link>
-
-        <button onClick={()=> refresh()}>Refresh</button>
+      <div className="nav-links">
+        <Link to="/admins" className="nav-button admins">Admins</Link>
+        <Link to="/bloggers" className="nav-button bloggers">Bloggers</Link>
+        <Link to="/posts" className="nav-button posts">Posts</Link>
+        <Link to="/posts" className="nav-button posts">Chat</Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

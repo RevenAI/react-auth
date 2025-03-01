@@ -69,6 +69,7 @@ const AdminList = () => {
                                 <p>{admin.firstName}</p>
                                 <p>{admin.lastName}</p>
                                 <p>{admin.email}</p>
+                                <p>{admin.postsCreated}</p>
                             </li>
                         ))}
                     </ul>
