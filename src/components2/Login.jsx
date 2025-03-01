@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import apiRequest, { API_URL } from '../api/axios';
+import dynamicAxios from '../api/axios';
 
 const Login = () => {
     const { setAuth } = useAuth();
@@ -29,7 +29,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await apiRequest.post(
+            const response = await dynamicAxios.post(
                 "/admins/login",
                 { email, password }
             );            
